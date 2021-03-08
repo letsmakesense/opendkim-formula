@@ -1,10 +1,10 @@
 opendkim:
   conf:
     UserID: "opendkim:opendkim"
-    KeyTables: "/etc/opendkim/KeyTable"
-    SigningTable: "/etc/opendkim/SigningTable"
+    KeyTable: "/etc/opendkim/KeyTable"
+    SigningTable: "refile:/etc/opendkim/SigningTable"
     PidFile: "/var/run/opendkim/opendkim.pid"
-    Mode: "v"
+    Mode: "sv"
     Syslog: "yes"
     SyslogSuccess: "yes"
     LogWhy: "yes"
@@ -25,4 +25,4 @@ opendkim:
         selector: |
           -----BEGIN RSA PRIVATE KEY-----
           -----END RSA PRIVATE KEY-----
- 
+
